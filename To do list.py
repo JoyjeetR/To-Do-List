@@ -1,5 +1,6 @@
 # Make a to do list. User can add, remove and view task. Store the list in a file between sessions.
 import csv
+# To add a one task
 def add_row(file_name):
     with open(file_name,'r') as f:
         r = csv.reader(f)
@@ -14,6 +15,7 @@ def add_row(file_name):
         task = input(f"Enter Task for Sno {n} :")
         write.writerow([n,task])
 
+# To add multiple tasks
 def add_rows(file_name) :
     with open(file_name,'r') as f:
         r = csv.reader(f)
@@ -31,6 +33,7 @@ def add_rows(file_name) :
             write.writerow([n,task])
             stop = int(input("Enter 1 to continue or 0 to stop :"))
 
+# For viewing all tasks
 def view_task(file_name):
     with open(file_name,'r') as file:
         r = csv.reader(file)
@@ -41,6 +44,7 @@ def view_task(file_name):
                 print(f"{item}.    ",end="")
             print()
             
+# To remove task
 def remove_row(file_name):
     with open (file_name,'r') as file:
         r=csv.reader(file)
@@ -55,7 +59,7 @@ def remove_row(file_name):
         for row in new_list:
             write.writerow(row)
             
-        
+# Connecting the file where the information is stored
 file_name = "ToDoList/ToDoList.csv"
 while True:
     print("1. Add")
