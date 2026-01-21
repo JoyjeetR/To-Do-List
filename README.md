@@ -40,4 +40,5 @@ Data remains saved even after exiting the program
 - Convert to GUI or Web Application
 
 ## Preview 
-![image]()
+![image](https://github.com/JoyjeetR/To-Do-List/blob/main/img/Preview1.png)
+![image](https://github.com/JoyjeetR/To-Do-List/blob/main/img/Preview2.png)
